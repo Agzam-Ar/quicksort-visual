@@ -1,0 +1,158 @@
+
+.title-slide-body {
+	color: #fff;
+}
+
+.title-slide-body > h1 {
+	user-select: none;
+	font-family: monospace;
+	font-size: 7em;
+	text-shadow: 0 0 .2em #ffffff33, 0 0 .5em #ffffff33;
+	mix-blend-mode: lighten;
+	opacity: 0;
+}
+.title-slide-body > h2 {
+	user-select: none;
+	font-family: monospace;
+	color: #ffffff88;
+	font-size: 2em;
+	text-shadow: 0 0 .2em #ffffff33, 0 0 .5em #ffffff33;
+	mix-blend-mode: lighten;
+	opacity: 0;
+	margin-top: -1em;
+	word-wrap: break-word;
+	white-space: break-spaces;
+	transform: none;
+
+	position: fixed;
+	width: 100vw;
+    justify-content: center;
+	display: flex;
+}
+
+.title-slide-body > h1.shown {
+    animation: show .8s cubic-bezier(0.2, 0.4, 0.2, 1) forwards;
+}
+
+.title-slide-body > h2.shown {
+    animation: show .8s cubic-bezier(0.2, 0.4, 0.2, 1) forwards;
+	animation-delay: .2s;
+}
+
+.title-slide-body > h2.hidden {
+	opacity: 1;
+    animation: hide 1.8s cubic-bezier(0.2, 0.4, 0.2, 1) forwards;
+	animation-delay: 0;
+}
+
+@keyframes show {
+
+	0% {
+    	transform: translateY(24px);
+	}
+
+
+	100% {
+    	transform: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes hide {
+
+	0% {
+	}
+
+
+	100% {
+		opacity: 0;
+    	transform: translateY(-24px);
+	}
+}
+
+
+@keyframes show-scl {
+
+	0% {
+		transform: scale(0);
+	}
+
+
+	100% {
+		opacity: 1;
+    	transform: scale(1);
+	}
+}
+
+
+.buffer-src-num-box {
+	display: flex;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.number {
+	font-family: monospace;
+	user-select: none;
+	position: fixed;
+/*	font-size: 2em;*/
+	opacity: 0;
+	display: flex;
+	border: 1px solid #202637;
+	background: #0c162d;
+	border-radius: 6px;
+/*	width: 2em;*/
+/*	height: 2em;*/
+    align-items: center;
+    justify-content: center;
+/*    margin: .2em;*/
+    transition: .2s cubic-bezier(0.2, 0.4, 0.2, 1);
+}
+
+.number.shown {
+    animation: show-scl .8s cubic-bezier(0.2, 0.4, 0.2, 1) forwards;
+}
+
+.number.lowindex {
+	mix-blend-mode: lighten;
+	color: #00cfc8;
+	background: transparent;
+	border: none;
+	transform: translateY(33%) scaleY(-.5) !important;
+}
+
+.number.lowindex-name {
+	mix-blend-mode: lighten;
+	color: #00cfc8;
+	background: transparent;
+	border: none;
+	font-size: 3vh !important;
+}
+
+
+.number.index {
+	mix-blend-mode: lighten;
+	color: #00cfc8;
+	background: transparent;
+	border: none;
+	transform: translateY(-33%) scaleY(.5) !important;
+}
+
+.number.index-name {
+	mix-blend-mode: lighten;
+	color: #00cfc8;
+	background: transparent;
+	border: none;
+	font-size: 3vh !important;
+}
+
+.number.pivot {
+	border: 2px solid #93ff93;
+	background: #00ff0066;
+}
+
+.number.disabled {
+	opacity: .3 !important;
+}

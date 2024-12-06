@@ -1,0 +1,145 @@
+
+
+
+.background-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    user-select: none;
+    pointer-events: none;
+    background-color: #040d21;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-box > svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    transform: translate(-50%, -50%);
+}
+
+.background-circle-1 {
+	animation: bg-circle-animation-1 100s infinite;
+	mix-blend-mode: lighten;
+	cx: 80%;
+}
+.background-circle-2 {
+	animation: bg-circle-animation-2 100s infinite;
+	mix-blend-mode: lighten;
+	cx: 80%;
+}
+
+.bg-circle-pink {
+	animation: pink-to-blue 50s infinite;
+}
+.bg-circle-blue {
+	animation: blue-to-pink 50s infinite;
+}
+
+@keyframes pink-to-blue {
+	0% {
+		fill: #db469f;
+	}
+	50% {
+		fill: #043a8a;
+	}
+	100% {
+		fill: #db469f;
+	}
+}
+
+@keyframes blue-to-pink {
+	0% {
+		fill: #043a8a;
+	}
+	50% {
+		fill: #db469f55;
+	}
+	100% {
+		fill: #043a8a;
+	}
+}
+
+@keyframes rotate {
+
+	0% {
+		fill: #db469f; 
+		cy: 0%;
+		rx: 291;
+		ry: 229;
+	}
+
+
+	100% {
+		transform: rotate(-10 50 100) translate(-36 0); 
+	}
+}
+
+@keyframes bg-circle-animation-2 {
+	0% { 
+		fill: #db469f; 
+		cy: 90%;
+		rx: 20%;
+		ry: 301;
+	}
+	50% { 
+		fill: #043a8a;  
+		cy: 0%;
+		rx: 291;
+		ry: 229;
+	}
+	66% { 
+		fill: transparent;
+		rx: 0;
+		ry: 0;
+	}
+	90% { 
+		fill: transparent;
+		rx: 0;
+		ry: 0;
+	}
+	100% { 
+		fill: #db469f; 
+		cy: 90%;
+		rx: 20%;
+		ry: 301;
+	}
+}
+
+
+@keyframes bg-circle-animation-1 {
+	0% { 
+		fill: #043a8a;  
+		cy: 0%;
+		rx: 291;
+		ry: 229;
+	}
+	50% { 
+		fill: #db469f; 
+		cy: 90%;
+		rx: 20%;
+		ry: 301;
+	}
+	66% { 
+		fill: transparent;
+		rx: 0;
+		ry: 0;
+	}
+	90% { 
+		fill: transparent;
+		rx: 0;
+		ry: 0;
+	}
+	100% { 
+		fill: #db469f; 
+		cy: 0%;
+
+		rx: 291;
+		ry: 229;
+	}
+}
